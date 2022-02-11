@@ -5,5 +5,3 @@ function getMap(lat,lon) {
         document.getElementById("map").setAttribute("src",response.url);
     })
 }
-
-getMap(40.7128,-74.0060);
