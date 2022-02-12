@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.13.0/maps/maps.css'>
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+
+    <title>Space Launch</title>
+</head>
+<div class="header">
+    <header>
+        <!-- <span>Add icon of a rocket launching if possible</span> -->
+        <h1>Space Launch Search</h1>
+    </header>
+</div>
+
+
+<body>
+    <main class="main">
+        <div class="left">
+            <p>Select a date to begin your journey</p>
+            <input type="date">
+        <div class="calendar" id="datepicker"> </div>
+        <div class="saved-searches">
+            <button></button>
+        </div>
+        <div class="saved-searches">
+            <button></button>
+        </div>
+        <div class="saved-searches">
+            <button></button>
+        </div>
+        <div class="saved-searches">
+            <button></button>
+        </div>
+        <div class="saved-searches">
+            <button></button>
+        </div>
+        </div>
+
+
+        <div class="left-side-map">
+            <div id='map' class='map'></div>
+        </div>
+
+        <div class="right-side-launch-info">
+
+        </div>
+    </main>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+    <script src='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.13.0/maps/maps-web.min.js'></script>
+    <script src="./assets/script.js"></script>
+
+    <script>
+        var map = tt.map({
+            key: 'BJ78zHMubh9YCv8lA7GrJW7DrSBqaNTr',
+            container: 'map',
+            dragPan: !isMobileOrTablet()
+        });
+        map.addControl(new tt.FullscreenControl());
+        map.addControl(new tt.NavigationControl());
+    </script>
+</body>
+
+</html>

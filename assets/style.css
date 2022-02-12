@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+
+.ui-datepicker-next {
+    /* display: flex; */
+    float: right;
+}
+
+.calendar {
+    max-width: 350px;
+    padding: 10px;
+    border: 1px solid green;
+}
+
+.main {
+    display: flex;
+    padding: 20px;
+}
+
+.left {
+    width: 20%;
+}
+
+
+.left-side-map {
+    width: 40%;
+    background-color: pink;
+    margin: 0 10px;
+}
+
+.right-side-launch-info{
+    width: 40%;
+    background-color: palegoldenrod;
+}
