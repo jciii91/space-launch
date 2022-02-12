@@ -5,35 +5,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="./assets/style.css">
-    <title>Space Launch</title>
 </head>
-<div>
-    <header>
-        <!-- <span>save icon of a rocket launching if possible</span> -->
-        <h1>Space Launch Search</h1>
-
-        <div>
-            <ul>
-                <li></li>
-            </ul>
-        </div>
-
-    </header>
-</div>
 
 <body>
-    <main class="row">
-        <div>
-            <img id="map" src="">
+    <div>
+        <header>
+            <!-- <span>Add icon of a rocket launching if possible</span> -->
+            <h1>Space Launch Search</h1>
+        </header>
+        <p>Select a date to begin your journey</p>
+        <div class="inputContainer">
+            <textarea id="launchYear">2022</textarea>
+        </div>
+        <div class="inputContainer">
+            <select name="months" id="monthsList">
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+        </div>
+        <div id="calendarHolder">
+            <button id="setMonth">Check for Launches</button>
+        </div>
+    </div>
+
+    <main>
+        <div class="left-side-map">
+
         </div>
 
         <div></div>
     </main>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="./assets/script.js"></script>
 </body>
 

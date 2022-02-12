@@ -1,0 +1,17 @@
+.inputContainer {
+    width: 10%;
+    display: inline-block;
+}
+
+#datePicker{
+    width: 1px;
+    border: 0;
+    position: relative;
+    left: -10px;
+    z-index: 1;
+}
+
+#setMonth {
+    position: relative;
+    z-index: 10;
+}
