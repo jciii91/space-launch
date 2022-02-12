@@ -116,10 +116,11 @@ function getBadDates(inputYear,inputMonth) {
             beforeShowDay: function(date){
                 var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
                 var array = badDatesArray;
-                return [ array.indexOf(string) == -1 ];
+                return [ array.indexOf(string) != -1 ];
             },
             onClose: function(date){
-                console.log(date);
+                output = date.slice(6,10) + "-" + date.slice(0,2) + "-" + date.slice(3,5);
+                console.log(output);
                 calID.remove();
             }
         });
