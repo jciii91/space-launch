@@ -25,11 +25,27 @@
 
 .left-side-map {
     width: 40%;
-    background-color: pink;
+    /* background-color: pink; */
     margin: 0 10px;
 }
 
 .right-side-launch-info{
     width: 40%;
     background-color: palegoldenrod;
+}
+.saved-search{
+    width: 100%;
+    padding: 10px;
+    background-color: lightblue;
+    text-align: center;
+    margin: 5px 0px;
+}
+
+@media (max-width:745px) {
+    .left, .left-side-map, .right-side-launch-info {
+        width: 100%;
+    }
+    .main {
+        display: block;
+    }
 }
