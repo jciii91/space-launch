@@ -16,6 +16,7 @@
 .main {
     display: flex;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 .left {
@@ -44,6 +45,9 @@
 @media (max-width:745px) {
     .left, .left-side-map, .right-side-launch-info {
         width: 100%;
+    }
+    .left-side-map{
+        height: 450px;
     }
     .main {
         display: block;
