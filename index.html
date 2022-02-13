@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.13.0/maps/maps.css'>
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
     <link rel="stylesheet" href="./assets/style.css">
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
@@ -25,32 +26,21 @@
     <main class="main">
         <div class="left">
             <p>Select a date to begin your journey</p>
-            <input type="date">
+            <!-- <input type="date" id="date-input"> -->
         <div class="calendar" id="datepicker"> </div>
-        <div class="saved-searches">
-            <button></button>
+        <div class="saved-searches" id="saved-searches">
+            
         </div>
-        <div class="saved-searches">
-            <button></button>
-        </div>
-        <div class="saved-searches">
-            <button></button>
-        </div>
-        <div class="saved-searches">
-            <button></button>
-        </div>
-        <div class="saved-searches">
-            <button></button>
-        </div>
+        
         </div>
 
 
-        <div class="left-side-map">
-            <div id='map' class='map'></div>
+        <div class="left-side-map map" id="map">
+           
         </div>
 
-        <div class="right-side-launch-info">
-
+        <div class="right-side-launch-info" id="info">
+            
         </div>
     </main>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
@@ -58,15 +48,17 @@
     <script src='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.13.0/maps/maps-web.min.js'></script>
     <script src="./assets/script.js"></script>
 
-    <script>
-        var map = tt.map({
-            key: 'BJ78zHMubh9YCv8lA7GrJW7DrSBqaNTr',
-            container: 'map',
-            dragPan: !isMobileOrTablet()
+    <!-- <script>
+       L.mapquest.key = 'lCzrKhevQBbPeLBz5rv7JR';
+
+        // 'map' refers to a <div> element with the ID map
+        L.mapquest.map('map', {
+        center: [37.7749, -122.4194],
+        layers: L.mapquest.tileLayer('map'),
+        zoom: 12,
+        
         });
-        map.addControl(new tt.FullscreenControl());
-        map.addControl(new tt.NavigationControl());
-    </script>
+    </script> -->
 </body>
 
 </html>
