@@ -5,38 +5,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/style.css">
-    <title>Space Launch</title>
 </head>
-<div>
+
+<div class="header">
     <header>
-        <!-- <span>save icon of a rocket launching if possible</span> -->
+        <!-- <span>Add icon of a rocket launching if possible</span> -->
         <h1>Space Launch Search</h1>
-
-
-        <ul id="missionName">
-            <li></li>
-        </ul>
-
-
     </header>
 </div>
 
+
 <body>
-    <main class="row">
-        <div>
-            <img id="map" src="">
+    <main class="main">
+        <div class="left">
+            <p>Select a date to begin your journey</p>
+            <!-- <input type="date" id="date-input"> -->
+            <div class="inputContainer">
+                <input value="2022" type="number" min="1940" id="launchYear">
+            </div>
+            <div class="input-field">
+                <select name="months" id="monthsList">
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+            </div>
+            <div id="calendarHolder">
+                <button id="setMonth">Check for Launches</button>
+            </div>
+            <div class="calendar" id="datePicker"></div>
+            <div class="saved-searches" id="saved-searches"></div>
 
         </div>
 
-        <div>
 
+        <div class="left-side-map map" id="map">
+            <img id="mapImg" src="">
         </div>
+
+        <div class="right-side-launch-info" id="info"></div>
     </main>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="./assets/script.js"></script>
 </body>
 
