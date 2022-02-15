@@ -16,6 +16,19 @@ $(document).ready(function () {
             })
     }
 
+    function getVessle(rocketImage) {
+        var info = $("#info");
+        fetch("https://ll.thespacedevs.com/2.2.0/launch/?is_crewed=false&include_suborbital=true&related=false")
+            .then(function (response) {
+                if (response.ok) return response.json();
+            })
+            .then(function (launches) {
+                document.getElementById("#vessleImg").setAttribute("src", results.launch.image);
+            })
+    }
+
+
+
     function getBadDates(inputYear, inputMonth) {
         badDatesArray = [];
         var maxDay = 31;
@@ -132,17 +145,29 @@ $(document).ready(function () {
 
                 calID[0].focus();
             })
+
+
     }
 
     function getMissionData(firstDate, secondDate) {
+        var ul = $("#missionName");
+
         fetch("https://lldev.thespacedevs.com/2.2.0/launch/?limit=100&window_start__gte=" + firstDate + "T00%3A00%3A00Z&window_start__lt=" + secondDate + "T00%3A00%3A00Z")
             .then(function (response) {
                 if (response.ok) return response.json();
             })
-            .then(data => {
-                console.log(data);
-                // add ul stuff here
+            .then(function (launches) {
+                ul.empty();
+
+                $.each(launches.results, function (i, launch) {
+                    console.log(launch)
+                    var li = $("<li>");
+                    li.text(launch.name);
+                    ul.append(li);
+                })
+                //var coordinates = launch.pad..latitude.longitude;
             })
+
     }
 
     $("#setMonth").on("click", function () {
@@ -151,4 +176,10 @@ $(document).ready(function () {
         getBadDates(year, month);
         getMap(28.3922, -80.6077);
     });
+
+
 });
+ul.on("click", "li"), function () {
+    getMap()
+}
+
