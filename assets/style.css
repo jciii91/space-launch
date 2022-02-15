@@ -1,5 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+
+.ui-datepicker-next {
+    /* display: flex; */
+    float: right;
+}
+
+.calendar {
+    max-width: 350px;
+    padding: 10px;
+    border: 1px solid green;
+}
+
+.main {
+    display: flex;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.left {
+    width: 20%;
+}
+
+
+.left-side-map {
+    width: 40%;
+    /* background-color: pink; */
+    margin: 0 10px;
+}
+
+.right-side-launch-info{
+    width: 40%;
+    background-color: palegoldenrod;
+}
+.saved-search{
+    width: 100%;
+    padding: 10px;
+    background-color: lightblue;
+    text-align: center;
+    margin: 5px 0px;
+}
+
 .inputContainer {
-    width: 10%;
+    /* width: 10%; */
     display: inline-block;
 }
 
@@ -14,4 +58,16 @@
 #setMonth {
     position: relative;
     z-index: 10;
+}
+
+@media (max-width:745px) {
+    .left, .left-side-map, .right-side-launch-info {
+        width: 100%;
+    }
+    .left-side-map{
+        height: 450px;
+    }
+    .main {
+        display: block;
+    }
 }
