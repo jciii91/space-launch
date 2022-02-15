@@ -12,7 +12,6 @@ $(document).ready(function () {
     function getMap(lat, lon) {
         fetch("https://www.mapquestapi.com/staticmap/v5/map?key=lCzrKhevQBbPeLBz5rv7JRWrlYKVnVae&center=" + lat + "," + lon)
             .then(response => {
-                console.log(response);
                 document.getElementById("mapImg").setAttribute("src", response.url);
             })
     }
@@ -123,14 +122,27 @@ $(document).ready(function () {
                         return [array.indexOf(string) != -1];
                     },
                     onClose: function (date) {
-                        output = date.slice(6, 10) + "-" + date.slice(0, 2) + "-" + date.slice(3, 5);
-                        console.log(output);
+                        firstDate = date.slice(6, 10) + "-" + date.slice(0, 2) + "-" + date.slice(3, 5);
+                        secondDate = firstDate.slice(0,-5) + nextMonth + "-01";
+                        console.log(secondDate);
+                        getMissionData(firstDate,secondDate);
                         calID.remove();
                     }
                 });
 
                 calID[0].focus();
             })
+    }
+
+    function getMissionData (firstDate,secondDate) {
+        fetch("https://lldev.thespacedevs.com/2.2.0/launch/?limit=100&window_start__gte=" + firstDate + "T00%3A00%3A00Z&window_start__lt=" + secondDate + "T00%3A00%3A00Z")
+        .then(function (response) {
+            if (response.ok) return response.json();
+        })
+        .then(data => {
+            console.log(data);
+            // add ul stuff here
+        })
     }
 
     $("#setMonth").on("click", function () {
