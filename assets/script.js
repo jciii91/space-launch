@@ -1,13 +1,8 @@
 $(document).ready(function () {
     M.AutoInit();
 
-    var todaysDate = moment().format("YYYY-MM-DD");
-    // var thisYear = parseInt(todaysDate.slice(0, 4));
-    // var thisMonth = parseInt(todaysDate.slice(5, 7));
     var badDatesArray = [];
-
-    // var currentYear;
-    // var currentMonth;
+    var launchData = [];
 
     function getMap(lat, lon) {
         fetch("https://www.mapquestapi.com/staticmap/v5/map?key=lCzrKhevQBbPeLBz5rv7JRWrlYKVnVae&center=" + lat + "," + lon)
@@ -137,12 +132,10 @@ $(document).ready(function () {
                     onClose: function (date) {
                         firstDate = date.slice(6, 10) + "-" + date.slice(0, 2) + "-" + date.slice(3, 5);
                         secondDate = firstDate.slice(0, -5) + nextMonth + "-01";
-                        console.log(secondDate);
                         getMissionData(firstDate, secondDate);
                         calID.remove();
                     }
                 });
-
                 calID[0].focus();
             })
 
@@ -160,7 +153,8 @@ $(document).ready(function () {
                 ul.empty();
 
                 $.each(launches.results, function (i, launch) {
-                    console.log(launch)
+                    launchData = launches.results;
+                    console.log(launch);
                     var li = $("<li>");
                     li.text(launch.name);
                     ul.append(li);
@@ -174,12 +168,13 @@ $(document).ready(function () {
         year = $("#launchYear")[0].value;
         month = $("#monthsList")[0].value;
         getBadDates(year, month);
-        getMap(28.3922, -80.6077);
     });
 
-
+    $("ul").on("click", "li", function () {
+        var child = this;
+        var parent = child.parentNode;
+        var index = Array.prototype.indexOf.call(parent.children, child);
+        var launch = launchData[index];
+        getMap(launch.pad.latitude,launch.pad.longitude);
+    });
 });
-ul.on("click", "li"), function () {
-    getMap()
-}
-
