@@ -170,6 +170,7 @@ $(document).ready(function () {
 
     }
 
+
     $("#setMonth").on("click", function () {
         year = $("#launchYear")[0].value;
         month = $("#monthsList")[0].value;
