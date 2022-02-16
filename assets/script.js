@@ -11,15 +11,11 @@ $(document).ready(function () {
             })
     }
 
-    function getVessle(rocketImage) {
-        var info = $("#info");
-        fetch("https://ll.thespacedevs.com/2.2.0/launch/?is_crewed=false&include_suborbital=true&related=false")
-            .then(function (response) {
-                if (response.ok) return response.json();
-            })
-            .then(function (launches) {
-                document.getElementById("#vessleImg").setAttribute("src", results.launch.image);
-            })
+    function showMissionData(missionData) {
+        console.log(missionData.image);
+        document.getElementById("vessleImg").setAttribute("src", missionData.image);
+        document.getElementById("info").innerText = missionData.name;
+        document.getElementById("padLink").setAttribute("href", missionData.pad.wiki_url);
     }
 
 
@@ -176,5 +172,6 @@ $(document).ready(function () {
         var index = Array.prototype.indexOf.call(parent.children, child);
         var launch = launchData[index];
         getMap(launch.pad.latitude, launch.pad.longitude);
+        showMissionData(launch);
     });
 });
