@@ -23,7 +23,6 @@ $(document).ready(function () {
     }
 
 
-
     function getBadDates(inputYear, inputMonth) {
         badDatesArray = [];
         var maxDay = 31;
@@ -176,6 +175,6 @@ $(document).ready(function () {
         var parent = child.parentNode;
         var index = Array.prototype.indexOf.call(parent.children, child);
         var launch = launchData[index];
-        getMap(launch.pad.latitude,launch.pad.longitude);
+        getMap(launch.pad.latitude, launch.pad.longitude);
     });
 });
