@@ -8,17 +8,15 @@ $(document).ready(function () {
         fetch("https://www.mapquestapi.com/staticmap/v5/map?key=lCzrKhevQBbPeLBz5rv7JRWrlYKVnVae&center=" + lat + "," + lon)
             .then(response => {
                 document.getElementById("mapImg").setAttribute("src", response.url);
+                console.log(response)
             })
     }
 
     function getVessle(rocketImage) {
-        var info = $("#info");
-        fetch("https://ll.thespacedevs.com/2.2.0/launch/?is_crewed=false&include_suborbital=true&related=false")
-            .then(function (response) {
-                if (response.ok) return response.json();
-            })
-            .then(function (launches) {
-                document.getElementById("#vessleImg").setAttribute("src", results.launch.image);
+        fetch("https://ll.thespacedevs.com/2.2.0/launch/?is_crewed=false&include_suborbital=true&related=false" + rocketImage)
+            .then(response => {
+                document.getElementById("vessleImg").setAttribute("src", response.url);
+                console.log(response)
             })
     }
 
