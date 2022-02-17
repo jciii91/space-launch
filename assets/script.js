@@ -19,6 +19,11 @@ $(document).ready(function () {
         document.getElementById("padLink").setAttribute("href", missionData.pad.wiki_url);
     }
 
+    function serviceProvider(providerInfo) {
+        console.log(providerInfo.launch_service_provider.name);
+        document.getElementById("service-provider").innerText = providerInfo.launch_service_provider.name;
+    }
+
 
     function getBadDates(inputYear, inputMonth) {
         badDatesArray = [];
@@ -154,6 +159,11 @@ $(document).ready(function () {
                     var li = $("<li>");
                     li.text(launch.name);
                     ul.append(li);
+                    // var btn = $("<button>");
+                    // btn.classList.add("btn waves-effect waves-light"<i class="material-icons right">send</i>)
+                    var faveBtn = document.createElement("button");
+                    faveBtn.innerHTML = `<a class="btn-floating btn-small waves-effect waves-light black"><i class="material-icons">+</i></a>`;
+                    ul.append(faveBtn);
                 })
                 //var coordinates = launch.pad..latitude.longitude;
             })
@@ -167,12 +177,13 @@ $(document).ready(function () {
         getBadDates(year, month);
     });
 
-    $("ul").on("click", "li", function () {
+    $("ul").on("click", "li", "button", function () {
         var child = this;
         var parent = child.parentNode;
         var index = Array.prototype.indexOf.call(parent.children, child);
         var launch = launchData[index];
         getMap(launch.pad.latitude, launch.pad.longitude);
         showMissionData(launch);
+        serviceProvider(launch);
     });
 });
