@@ -5,7 +5,7 @@
 .header {
     padding: 40px;
     text-align: center;
-    background: url(https://github.com/jciii91/space-launch/blob/develop/assets/images/header%20main.jpg);
+    background: url(./images/header\ main.jpg);
     color: white;
     font-size: 30px;
   }
