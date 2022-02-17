@@ -2,6 +2,14 @@
     box-sizing: border-box;
 }
 
+.header {
+    padding: 40px;
+    text-align: center;
+    background: url(./images/header\ main.jpg);
+    color: white;
+    font-size: 30px;
+  }
+
 .ui-datepicker-next {
     /* display: flex; */
     float: right;
