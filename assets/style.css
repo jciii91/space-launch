@@ -21,6 +21,14 @@
 .ui-datepicker-next {
     /* display: flex; */
     float: right;
+    background-color: white;
+}
+
+.inputContainer{
+    background-color: ghostwhite;
+}
+.input-field{
+    background-color: ghostwhite;
 }
 
 .calendar {
@@ -68,6 +76,13 @@
     position: relative;
     left: -10px;
     z-index: 1;
+}
+.right-side-launch-info {
+    background-color: antiquewhite;
+    
+}
+.right-side-launch-info {
+    display: none;
 }
 
 #setMonth {
