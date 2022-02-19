@@ -3,6 +3,7 @@ $(document).ready(function () {
 
   var badDatesArray = [];
   var launchData = [];
+  var savedLaunches = [];
 
   function getMap(lat, lon) {
     fetch(
@@ -186,7 +187,7 @@ $(document).ready(function () {
 
         $.each(launches.results, function (i, launch) {
           launchData = launches.results;
-          console.log(launch);
+          //console.log(launch);
           var li = $("<li>");
           li.text(launch.name);
           ul.append(li);
@@ -200,13 +201,36 @@ $(document).ready(function () {
       });
   }
 
+  function showFavorites() {
+    favoritesList = JSON.parse(localStorage.getItem("saveData"));
+    fetch(favoritesList[0].url)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+      });
+  }
+
+  function saveFavorites(item) {
+    var flag = false;
+    for (let i = 0; i < savedLaunches.length; i++) {
+      if (savedLaunches[i].url == item.url) {
+        flag = true;
+      }
+    }
+    if (flag) {
+      return;
+    }
+    savedLaunches.push(item);
+    localStorage.setItem("saveData",JSON.stringify(savedLaunches));
+  }
+
   $("#setMonth").on("click", function () {
     year = $("#launchYear")[0].value;
     month = $("#monthsList")[0].value;
     getBadDates(year, month);
   });
 
-  $("ul").on("click", "li", "button", function () {
+  $("ul").on("click", "li", function () {
     var child = this;
     var parent = child.parentNode;
     var index = Array.prototype.indexOf.call(parent.children, child);
@@ -215,5 +239,17 @@ $(document).ready(function () {
     showMissionData(launch);
     serviceProvider(launch);
     missionDesc(launch);
+  });
+
+  $("ul").on("click", "button", function () {
+    var child = this;
+    var parent = child.parentNode;
+    var index = (Array.prototype.indexOf.call(parent.children, child) - 1)/2;
+    var launch = launchData[index];
+    var favoriteItem = {
+      "name" : launch.name,
+      "url" : launch.url
+    };
+    saveFavorites(favoriteItem);
   });
 });
