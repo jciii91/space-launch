@@ -42,14 +42,16 @@
     margin: 5px 0px;
 }
 
-@media (max-width:745px) {
-    .left, .left-side-map, .right-side-launch-info {
-        width: 100%;
+  @media (max-width: 745px) {
+    .left,
+    .left-side-map,
+    .right-side-launch-info {
+      width: 100%;
     }
-    .left-side-map{
-        height: 450px;
+    .left-side-map {
+      height: 450px;
     }
     .main {
-        display: block;
+      display: block;
     }
-}
+  }
