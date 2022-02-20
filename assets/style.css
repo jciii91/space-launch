@@ -42,10 +42,6 @@ body {
   padding: 20px;
   margin-bottom: 20px;
 }
-.flex-center{
-    display: flex;
-    justify-content: center;
-    align-items:inherit;
 
 .left {
   width: 20%;
@@ -72,11 +68,6 @@ body {
   margin: 5px 0px;
 }
 
-.inputContainer {
-  /* width: 10%; */
-  display: inline-block;
-}
-
 #datePicker {
   width: 1px;
   border: 0;
@@ -85,7 +76,7 @@ body {
   z-index: 1;
 }
 .right-side-launch-info {
-  background-color: antiquewhite;
+  background-color: black;
   color: black;
 }
 
