@@ -37,10 +37,6 @@ body{
     margin-bottom: 20px;
 }
 
-.flex-center{
-    display: flex !important;
-    justify-content: center !important;
-    align-items:inherit;
 }
 .left {
     width: 20%;
@@ -55,8 +51,12 @@ body{
     width: 100%;
 }
 
-#infocard{
+.row
+.col.s5{
 width: 100%;
+margin-left: auto;
+left: auto;
+right: auto;
 }
 
 .saved-searches{
