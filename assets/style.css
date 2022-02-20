@@ -42,6 +42,10 @@ body {
   padding: 20px;
   margin-bottom: 20px;
 }
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items:inherit;
 
 .left {
   width: 20%;
@@ -49,13 +53,17 @@ body {
 
 .left-side-map {
   width: 40%;
-  /* background-color: pink; */
   margin: 0 10px;
 }
 
 .right-side-launch-info {
   width: 40%;
 }
+  
+#infocard{
+  width:100%
+  }
+  
 .saved-search {
   width: 100%;
   padding: 10px;
