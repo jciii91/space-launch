@@ -52,7 +52,7 @@ body{
 }
 
 .right-side-launch-info.row{
-    max-width: 500px;
+    width: 100%;
 }
 
 #infocard{
