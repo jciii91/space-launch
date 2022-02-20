@@ -13,7 +13,6 @@
 
 <div class="header">
     <header>
-        <!-- <span>Add icon of a rocket launching if possible</span> -->
         <h1 style="font-family:Agency FB;">The Space Launch</h1>
     </header>
 </div>
@@ -21,78 +20,95 @@
 
 <body>
     <main class="main">
-        <div class="left">
-            <p>Select a date to begin your journey</p>
-            <!-- <input type="date" id="date-input"> -->
-            <div class="inputContainer">
-                <input value="2022" type="number" min="1940" id="launchYear">
-            </div>
-            <div class="input-field">
-                <select name="months" id="monthsList">
-                    <option value="January">January</option>
-                    <option value="February">February</option>
-                    <option value="March">March</option>
-                    <option value="April">April</option>
-                    <option value="May">May</option>
-                    <option value="June">June</option>
-                    <option value="July">July</option>
-                    <option value="August">August</option>
-                    <option value="September">September</option>
-                    <option value="October">October</option>
-                    <option value="November">November</option>
-                    <option value="December">December</option>
-                </select>
-            </div>
-            <div id="calendarHolder">
-                <button id="setMonth">Check for Launches</button>
-            </div>
-            <div>
-                <button id="next10">Next 10 Launches</button>
-            </div>
-            <div class="saved-searches" id="saved-searches"></div>
+        <div class="row">
 
-            <div>
-                <ul id="missionName">
+            <!-- Selection column. Set date to check for launches, view the next 10 that will occur, or browse favorite launches -->
+            <div class="col l4 s12">
+                <p>Select a date to begin your journey</p>
 
-                </ul>
+                <!-- Set launch year -->
+                <div class="inputContainer">
+                    <input value="2022" type="number" min="1940" id="launchYear">
+                </div>
+
+                <!-- Select month to look in -->
+                <div class="input-field">
+                    <select name="months" id="monthsList">
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                </div>
+
+                <!-- Check launch data based on criteria set above -->
+                <div id="buttonHolder">
+                    <button id="setMonth">Check for Launches</button>
+                    <button id="next10">Next 10 Launches</button>
+                    <button id="favorites" data-target="selectWindow" class="modal-trigger">Select From Favorites</button>
+                </div>
+
+                <!-- Modal window for favorites -->
+                <div id="selectWindow" class="modal">
+                    <div class="modal-content">
+                        <h4>Please Select a Launch</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="clearFavorites" class="btn-flat">Clear Favorites</button>
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                    </div>
+                </div>
+
+                <!-- container for mission list -->
+                <div>
+                    <ul id="missionName">
+
+                    </ul>
+                </div>
             </div>
 
+            <!-- map container -->
+            <div class="map center-align col l4 s12" id="map">
+                <img id="mapImg" src="">
+            </div>
+
+            <!-- mission info container -->
+            <div class="launch-info col l4 s12">
+                <div class="card" id="infocard">
+                    <div class="card-image" >
+                        <img id="vessleImg" src="">
+                    </div>
+                    <div class="card-content">
+                        <p id="service-provider"></p>
+                    </div>
+                    <div class="card-content">
+                        <p id="mission-desc"></p>
+                    </div>
+
+                    <div class="card-content">
+                        <p id="info"></p>
+                    </div>
+                    <div class="card-action">
+                        <a id="padLink" href="#">Launchpad Info</a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-
-        <div class="left-side-map map row" id="map">
-            <img id="mapImg" src="">
-        </div>
-
-        <div class="right-side-launch-info row">
-            <div class="card col s5" id="infocard">
-                <div class="card-image" >
-                    <img id="vessleImg" src="">
-                    <!-- <span id="vessleName" class="card-title"></span> -->
-                </div>
-                <div class="card-content">
-                    <p id="service-provider"></p>
-                </div>
-                <div class="card-content">
-                    <p id="mission-desc"></p>
-                </div>
-
-                <div class="card-content">
-                    <p id="info"></p>
-                </div>
-                <div class="card-action">
-                    <a id="padLink" href="#" target="_blank">Launchpad Info</a>
-                </div>
-            </div>
-        </div>
-
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
 
