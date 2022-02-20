@@ -1,100 +1,95 @@
 * {
-  box-sizing: border-box;
-}
-.header {
-  padding: 40px;
-  border: 1px solid white;
-  text-align: center;
-  background: url(./images/header\ main.jpg);
-  color: white;
-  font-size: 30px;
-}
-
-body {
-  background-color: black;
-  color: white;
-}
-#launchYear {
-  color: black;
-}
-
-.ui-datepicker-next {
-  /* display: flex; */
-  float: right;
-  background-color: white;
-}
-
-.inputContainer {
-  background-color: ghostwhite;
-}
-.input-field {
-  background-color: ghostwhite;
-}
-
-.calendar {
-  max-width: 350px;
-  padding: 10px;
-  border: 1px solid green;
-}
-
-.main {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.left {
-  flex: auto;
-}
-
-.left-side-map.row {
-  flex: auto;
-}
-
-.right-side-launch-info.row {
-  flex: auto;
-}
-#infocard {
-  max-width: 1000px;
-}
-
-.saved-search {
-  width: 100%;
-  padding: 10px;
-  background-color: lightblue;
-  text-align: center;
-  margin: 5px 0px;
-}
-
-#datePicker {
-  width: 1px;
-  border: 0;
-  position: relative;
-  left: -10px;
-  z-index: 1;
-}
-.right-side-launch-info {
-  background-color: black;
-  color: black;
-}
-
-#setMonth {
-  position: relative;
-  z-index: 10;
-}
-
-@media (max-width: 745px) {
-  .left,
-  .left-side-map,
-  .right-side-launch-info {
-    width: 100%;
+    box-sizing: border-box;
   }
-  .left-side-map {
-    height: 450px;
+  .header {
+    padding: 40px;
+    border: 1px solid white;
+    text-align: center;
+    background: url(./images/header\ main.jpg);
+    color: white;
+    font-size: 30px;
   }
+  
+  body {
+    background-color: black;
+    color: white;
+  }
+  #launchYear {
+    color: black;
+  }
+  
+  .ui-datepicker-next {
+    /* display: flex; */
+    float: right;
+    background-color: white;
+  }
+  
+  .inputContainer {
+    background-color: ghostwhite;
+  }
+  .input-field {
+    background-color: ghostwhite;
+  }
+  
+  .calendar {
+    max-width: 350px;
+    padding: 10px;
+    border: 1px solid green;
+  }
+  
   .main {
-    display: block;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 20px;
+      margin-bottom: 20px;
   }
-}
+  
+  .left {
+  flex:auto}
+  
+  .left-side-map.row {
+  flex:auto
+  }
+  
+  .right-side-launch-info.row{
+  flex:auto
+  }
+  #infocard{
+      width: 100%;
+      background-color: white;
+      color: black;
+  }
+  .saved-search {
+    width: 100%;
+    padding: 10px;
+    background-color: lightblue;
+    text-align: center;
+    margin: 5px 0px;  
+
+  #datePicker {
+    width: 1px;
+    border: 0;
+    position: relative;
+    left: -10px;
+    z-index: 1;
+  }
+  
+  #setMonth {
+    position: relative;
+    z-index: 10;
+  }
+  
+  @media (max-width: 745px) {
+    .left,
+    .left-side-map,
+    .right-side-launch-info {
+      width: 100%;
+    }
+    .left-side-map {
+      height: 450px;
+    }
+    .main {
+      display: table-row;
+    }
+  }
