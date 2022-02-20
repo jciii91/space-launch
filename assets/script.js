@@ -211,12 +211,12 @@ $(document).ready(function () {
   }
 
   function getNextLaunches() {
-    fetch ("https://lldev.thespacedevs.com/2.2.0/launch/upcoming")
-      .then (response => response.json())
-      .then (data => {
+    fetch("https://lldev.thespacedevs.com/2.2.0/launch/upcoming")
+      .then((response) => response.json())
+      .then((data) => {
         var ul = $("#missionName");
         var launches = data;
-    
+
         ul.empty();
         $.each(launches.results, function (i, launch) {
           launchData = launches.results;
@@ -227,14 +227,14 @@ $(document).ready(function () {
           faveBtn.innerHTML = `<a class="btn-floating btn-small waves-effect waves-light black"><i class="material-icons">+</i></a>`;
           ul.append(faveBtn);
         });
-      })
+      });
   }
 
   function showFavorites() {
     favoritesList = JSON.parse(localStorage.getItem("saveData"));
     fetch(favoritesList[0].url)
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         console.log(data);
       });
   }
@@ -250,7 +250,7 @@ $(document).ready(function () {
       return;
     }
     savedLaunches.push(item);
-    localStorage.setItem("saveData",JSON.stringify(savedLaunches));
+    localStorage.setItem("saveData", JSON.stringify(savedLaunches));
   }
 
   $("#setMonth").on("click", function () {
@@ -277,11 +277,11 @@ $(document).ready(function () {
   $("ul").on("click", "button", function () {
     var child = this;
     var parent = child.parentNode;
-    var index = (Array.prototype.indexOf.call(parent.children, child) - 1)/2;
+    var index = (Array.prototype.indexOf.call(parent.children, child) - 1) / 2;
     var launch = launchData[index];
     var favoriteItem = {
-      "name" : launch.name,
-      "url" : launch.url
+      name: launch.name,
+      url: launch.url,
     };
     saveFavorites(favoriteItem);
   });

@@ -38,27 +38,28 @@ body {
 }
 
 .main {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .left {
-flex:auto}
+  flex: auto;
+}
 
 .left-side-map.row {
-flex:auto
+  flex: auto;
 }
 
-.right-side-launch-info.row{
-flex:auto
+.right-side-launch-info.row {
+  flex: auto;
 }
-#infocard{
-    max-width: 1000px;
+#infocard {
+  max-width: 1000px;
 }
-  
+
 .saved-search {
   width: 100%;
   padding: 10px;
