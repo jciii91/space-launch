@@ -1,29 +1,65 @@
 # space-launch
+
+## Purpose
+
+As space travel enthusiasts we created an application that tracks space launches. The user has two formats of launch selections. Date selection, or pagination of the next 10 launches.
+
+## Application Features
+
+- Rocket name
+- Mission name
+- Pad launch location
+- Picture of the rocket
+- Mission description
+- Pagination of next 10 launches
+
+## Built With
+
+- HTML
+- CSS
+- Javacript
+- Materiliaze
+- Jquery
+- Moment JS
+- Mapquest API
+- The SpaceDevs API
+
+## Website
+
+NEEDS TO BE UPDATED WITH MERGED MAIN BRANCH DEPLOYED SITE
+
+## Screenshot
+
+NEEDS TO BE UPDATED POST CSS UPDATES
+
+## Contribution
+
+Made with 🌌 by Avrumie Safranovitz, Hilary Vasconez, John Costello​
+
+## Acceptance Criteria:
+
 Provide information about upcoming orbital launches around the world.
 
-##User Story
-As a space traveler 
+## User Story
+
+As a space enthusiasts
 I WANT to see where upcoming space launches are taking place
-So THAT I can jump onto the next ship
+So THAT I can view information about the launch
 
-##Acceptance Criteria
-GIVEN a map of the globe showing pins that represent upcoming space launches
-WHEN I click on a pin
-THEN the website displays a picture and information on an upcoming launch
-WHEN I click out of the displayed information
-THEN I am brought back to the map displaying all upcoming launches
+## Acceptance Criteria
+
+GIVEN a map showing the location of a launch
+WHEN I click on a mission
+THEN the website displays a picture and information on the upcoming launch
 WHEN I finish searching
-THEN my search result is saved
-WHEN I click on a date on the calendar
-THEN the launch information for that date is displayed
+THEN my search result are saved
 
-##Mock-Up/Wireframe
+## Mock-Up/Wireframe
+
 https://www.figma.com/file/T7cADxy4yCI0vbqOABYgVd/Space?node-id=0%3A1
 
-##Delegation of Duties
-HTML - Avrumie
-CSS - Hilary 
-Javascript - John
-Bootstrap (something similar) - CDN, Hilary
-Jquery - CDN
-API's - John/Map, Avrumie/Space
+## Delegation of Duties
+
+- Avrumie: HTML, Space API, JS
+- Hilary: HTML, CSS
+- Javascript - HTML, Map API, JS​

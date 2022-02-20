@@ -1,103 +1,103 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 .header {
-    padding: 40px;
-    border: 1px solid white;
-    text-align: center;
-    background: url(./images/header\ main.jpg);
-    color: white;
-    font-size: 30px;
-  }
-  
-  body{
-    background-color: black;
-    color: white;
+  padding: 40px;
+  border: 1px solid white;
+  text-align: center;
+  background: url(./images/header\ main.jpg);
+  color: white;
+  font-size: 30px;
 }
-#launchYear{
-    color: black;
+
+body {
+  background-color: black;
+  color: white;
+}
+#launchYear {
+  color: black;
 }
 
 .ui-datepicker-next {
-    /* display: flex; */
-    float: right;
-    background-color: white;
-}
-
-.inputContainer{
-    background-color: ghostwhite;
-}
-.input-field{
-    background-color: ghostwhite;
-}
-
-.calendar {
-    max-width: 350px;
-    padding: 10px;
-    border: 1px solid green;
-}
-
-.main {
-    display: flex;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.left {
-    width: 20%;
-}
-
-
-.left-side-map {
-    width: 40%;
-    /* background-color: pink; */
-    margin: 0 10px;
-}
-
-.right-side-launch-info{
-    width: 40%;
-}
-.saved-search{
-    width: 100%;
-    padding: 10px;
-    background-color: lightblue;
-    text-align: center;
-    margin: 5px 0px;
+  /* display: flex; */
+  float: right;
+  background-color: white;
 }
 
 .inputContainer {
-    /* width: 10%; */
-    display: inline-block;
+  background-color: ghostwhite;
+}
+.input-field {
+  background-color: ghostwhite;
 }
 
-#datePicker{
-    width: 1px;
-    border: 0;
-    position: relative;
-    left: -10px;
-    z-index: 1;
+.calendar {
+  max-width: 350px;
+  padding: 10px;
+  border: 1px solid green;
+}
+
+.main {
+  display: flex;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.left {
+  width: 20%;
+}
+
+.left-side-map {
+  width: 40%;
+  /* background-color: pink; */
+  margin: 0 10px;
+}
+
+.right-side-launch-info {
+  width: 40%;
+}
+.saved-search {
+  width: 100%;
+  padding: 10px;
+  background-color: lightblue;
+  text-align: center;
+  margin: 5px 0px;
+}
+
+.inputContainer {
+  /* width: 10%; */
+  display: inline-block;
+}
+
+#datePicker {
+  width: 1px;
+  border: 0;
+  position: relative;
+  left: -10px;
+  z-index: 1;
 }
 .right-side-launch-info {
-    background-color: antiquewhite;
-    
+  background-color: antiquewhite;
 }
-.right-side-launch-info {
+/* .right-side-launch-info {
     display: none;
-}
+} */
 
 #setMonth {
-    position: relative;
-    z-index: 10;
+  position: relative;
+  z-index: 10;
 }
 
-@media (max-width:745px) {
-    .left, .left-side-map, .right-side-launch-info {
-        width: 100%;
-    }
-    .left-side-map{
-        height: 450px;
-    }
-    .main {
-        display: block;
-    }
+@media (max-width: 745px) {
+  .left,
+  .left-side-map,
+  .right-side-launch-info {
+    width: 100%;
+  }
+  .left-side-map {
+    height: 450px;
+  }
+  .main {
+    display: block;
+  }
 }
