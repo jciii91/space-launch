@@ -5,6 +5,15 @@ $(document).ready(function () {
   var launchData = [];
   var savedLaunches = [];
 
+  function checkLocal() {
+    console.log(savedLaunches);
+    favorites = JSON.parse(localStorage.getItem("saveData"));
+    if (favorites != null) {
+      savedLaunches = favorites;
+    }
+    console.log(savedLaunches);
+  }
+
   function getMap(lat, lon) {
     fetch(
       "https://www.mapquestapi.com/staticmap/v5/map?key=lCzrKhevQBbPeLBz5rv7JRWrlYKVnVae&center=" +
@@ -201,6 +210,26 @@ $(document).ready(function () {
       });
   }
 
+  function getNextLaunches() {
+    fetch ("https://lldev.thespacedevs.com/2.2.0/launch/upcoming")
+      .then (response => response.json())
+      .then (data => {
+        var ul = $("#missionName");
+        var launches = data;
+    
+        ul.empty();
+        $.each(launches.results, function (i, launch) {
+          launchData = launches.results;
+          var li = $("<li>");
+          li.text(launch.name);
+          ul.append(li);
+          var faveBtn = document.createElement("button");
+          faveBtn.innerHTML = `<a class="btn-floating btn-small waves-effect waves-light black"><i class="material-icons">+</i></a>`;
+          ul.append(faveBtn);
+        });
+      })
+  }
+
   function showFavorites() {
     favoritesList = JSON.parse(localStorage.getItem("saveData"));
     fetch(favoritesList[0].url)
@@ -230,6 +259,10 @@ $(document).ready(function () {
     getBadDates(year, month);
   });
 
+  $("#next10").on("click", function () {
+    getNextLaunches();
+  });
+
   $("ul").on("click", "li", function () {
     var child = this;
     var parent = child.parentNode;
@@ -252,4 +285,6 @@ $(document).ready(function () {
     };
     saveFavorites(favoriteItem);
   });
+
+  checkLocal();
 });
