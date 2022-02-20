@@ -37,6 +37,12 @@ body{
     margin-bottom: 20px;
 }
 
+.flex-center{
+    display: flex !important;
+    justify-content: center !important;
+    align-items:inherit;
+}
+
 }
 .left {
     width: 20%;
