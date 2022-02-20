@@ -1,100 +1,101 @@
-* {
-  box-sizing: border-box;
+*{
+    box-sizing: border-box;
 }
+body{
+    background-color: black;
+    color: white;
+}
+
+#launchYear{
+    color: white;
+}
+
+
 .header {
-  padding: 40px;
-  border: 1px solid white;
-  text-align: center;
-  background: url(./images/header\ main.jpg);
-  color: white;
-  font-size: 30px;
-}
-
-body {
-  background-color: black;
-  color: white;
-}
-#launchYear {
-  color: black;
-}
-
-.ui-datepicker-next {
-  /* display: flex; */
-  float: right;
-  background-color: white;
-}
-
-.inputContainer {
-  background-color: ghostwhite;
-}
-.input-field {
-  background-color: ghostwhite;
+    padding: 40px;
+    border: 1px solid white;
+    text-align: center;
+    background: url(./images/header\ main.jpg);
+    color: white;
+    font-size: 30px;
+  }
+  
+  .ui-datepicker-next {
+    /* display: flex; */
+    float: right;
 }
 
 .calendar {
-  max-width: 350px;
-  padding: 10px;
-  border: 1px solid green;
+    max-width: 350px;
+    padding: 10px;
+    border: 1px solid green;
 }
 
 .main {
-  display: flex;
-  padding: 20px;
-  margin-bottom: 20px;
+    display: flex;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
+.flex-center{
+    display: flex !important;
+    justify-content: center !important;
+    align-items:inherit;
+}
 .left {
-  width: 20%;
+    width: 20%;
 }
 
 .left-side-map.row {
-  max-width: 500px;
-  margin: auto;
+    max-width: 500px;
+    margin: auto;
 }
 
-.right-side-launch-info.row {
-  max-width: 500px;
+.right-side-launch-info.row{
+    max-width: 500px;
 }
-  
+
 #infocard{
-  width:100%
-  }
-  
-.saved-search {
-  width: 100%;
-  padding: 10px;
-  background-color: lightblue;
-  text-align: center;
-  margin: 5px 0px;
+width: 100%;
 }
 
-#datePicker {
-  width: 1px;
-  border: 0;
-  position: relative;
-  left: -10px;
-  z-index: 1;
+.saved-searches{
+    width: 100%;
+    padding: 10px;
+    background-color: lightblue;
+    text-align: center;
+    margin: 5px 0px;
 }
+
+
+
+#datePicker{
+    width: 1px;
+    border: 0;
+    position: relative;
+    left: -10px;
+    z-index: 1;
+}
+
 .right-side-launch-info {
-  background-color: black;
-  color: black;
+    background-color: black;
+    color: black;
+    
 }
 
 #setMonth {
-  position: relative;
-  z-index: 10;
+    position: relative;
+    z-index: 10;
 }
 
-@media (max-width: 745px) {
-  .left,
-  .left-side-map,
-  .right-side-launch-info {
-    width: 100%;
-  }
-  .left-side-map {
-    height: 450px;
-  }
-  .main {
-    display: block;
-  }
+@media (max-width:745px) {
+    .left, .left-side-map, .right-side-launch-info {
+        width: 100%;
+    }
+    .left-side-map{
+        height: 450px;
+    }
+    .main {
+        display: block;
+    }
 }
