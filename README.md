@@ -30,7 +30,7 @@ NEEDS TO BE UPDATED WITH MERGED MAIN BRANCH DEPLOYED SITE
 
 ## Screenshot
 
-NEEDS TO BE UPDATED POST CSS UPDATES
+![image](https://user-images.githubusercontent.com/78921988/154845715-006c2867-7917-44c1-902b-d105f7e1fdab.png)
 
 ## Contribution
 
