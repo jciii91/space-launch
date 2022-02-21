@@ -26,7 +26,7 @@ As space travel enthusiasts we created an application that tracks space launches
 
 ## Website
 
-NEEDS TO BE UPDATED WITH MERGED MAIN BRANCH DEPLOYED SITE
+https://jciii91.github.io/space-launch/
 
 ## Screenshot
 
