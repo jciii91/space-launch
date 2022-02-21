@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 40px;
+  border: 1px solid white;
+  text-align: center;
+  background: url(./images/header\ main.jpg);
+  color: white;
+  font-size: 30px;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.map,
+.card {
+    margin-top: 0;
+}
+
+#launchYear {
+  color: black;
+}
+
+.datepicker-date-display {
+    display: none;
+}
+
+.datepicker-table {
+    background-color: rgb(133, 216, 184);
+    border: 1px;
+}
+
+#datePicker {
+    display: none;
+}
+
+.ui-datepicker-next {
+  float: right;
+  background-color: white;
+}
+
+.inputContainer {
+  background-color: ghostwhite;
+}
+
+.input-field {
+  background-color: ghostwhite;
+}
+
+#buttonHolder {
+    position: relative;
+}
+
+#setMonth {
+    z-index: 10;
+}
+
+.modal {
+    color: black;
+}
+
+.modal li {
+    margin: 5px;
+}
+
+#mapImg {
+    width: 100%;
+}
+
+.launch-info {
+  background-color: black;
+  color: black;
+}
